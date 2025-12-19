@@ -1,0 +1,8 @@
+---
+- name: Using AWS role we made
+  hosts: localhost
+  connection: ansible.builtin.local
+  gather_facts: false
+
+  roles:
+    - rzfeeser.cloudcompute.build_ec2_on_aws

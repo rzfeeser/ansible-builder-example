@@ -1,0 +1,22 @@
+---
+# settings are available @
+# https://docs.ansible.com/automation-controller/latest/html/userguide/ee_reference.html
+
+version: 3
+
+images:
+  base_image:
+    name: quay.io/rockylinux/rockylinux:9  # quay.io/centos/centos:stream9
+
+dependencies:
+  ansible_core:
+    package_pip: ansible-core
+  ansible_runner:
+    package_pip: ansible-runner
+  system:
+  - openssh-clients
+  - sshpass
+  - git
+  galaxy: requirements.yml
+  python: requirements.txt
+
